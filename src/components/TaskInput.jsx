@@ -8,10 +8,7 @@ const TaskInput = () => {
   const addTask = () => {
     if (!text.trim()) return;
 
-    setTasks([
-      ...tasks,
-      { id: Date.now(), text, completed: false },
-    ]);
+    setTasks([...tasks, { id: Date.now(), text, completed: false }]);
 
     setText("");
   };
@@ -22,9 +19,12 @@ const TaskInput = () => {
         type="text"
         placeholder="Enter task..."
         value={text}
+        id="input"
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={addTask}>Add Task</button>
+      <button onClick={addTask} id="add">
+        Add Task
+      </button>
     </div>
   );
 };
