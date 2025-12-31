@@ -13,8 +13,12 @@ const Header = () => {
       </button>
 
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/stats">Stats</Link>
+        <Link to="/" id={darkMode ? "home" : "st"}>
+          Home
+        </Link>
+        <Link to="/stats" id={darkMode ? "stats" : "st"}>
+          Stats
+        </Link>
       </nav>
     </header>
   );
